@@ -60,11 +60,13 @@ It comprises three types of caching :
 ---
 ### 7. Is there a cost associated with Time Travel in Snowflake?
 
-**Yes**, Time travel is the feature provided by snowflake to retrieve data that is removed from Snowflake databases.
+**Yes**,
+
+Time travel is the feature provided by snowflake to retrieve data that is removed from Snowflake databases.
 Using time travel you can do:
-1. **Query data** in the past that has since been updated or deleted.
-2. **Create clones of entire tables**, schemas, and databases at or before specific points in the past.
-3. **Restore tables, schemas, and databases** that have been dropped.
+- **Query data** in the past that has since been updated or deleted.
+- **Create clones of entire tables**, schemas, and databases at or before specific points in the past.
+- **Restore tables, schemas, and databases** that have been dropped.
     
 Once the Time travel period is over, data is moved to the Fail-safe zone. For the snowflake standard edition, the default Time travel period is 1.
 For the snowflake Enterprise edition, for transient and temp DB, schema, tables, the default time travel period is 1. for permanent DB, schema, tables, and views, the default time travel can ranges from 1to 90 days.
@@ -72,7 +74,7 @@ For the snowflake Enterprise edition, for transient and temp DB, schema, tables,
 ---
 ### 8. **What is fail-safe in Snowflake?**
 
-When the time-travel period elapses, removed data moves to Fail-safe zone of 7 days for Enterprise edition snowflake and above. Once data goes to Failsafe, we need to contact Snowflake in order to restore the data. It may take from 24 hrs to days to get the data. The charges will occur from where the state of the data is changed on the basis of 24 Hr.
+When the time-travel period elapses, removed data moves to Fail-safe zone of 7 days for Enterprise edition and above. Once data goes to Failsafe, we need to contact Snowflake in order to restore the data. It may take from 24 hrs to days to get the data. The charges will occur from where the state of the data is changed on the basis of 24 Hr.
 
 ---
 ### 9. **What is the difference between Time-Travel vs Fail-Safe in Snowflake?**
