@@ -224,7 +224,7 @@ You must specify an internal stage in the PUT command when uploading files to Sn
 **User stages:** Each user has a Snowflake stage allocated to them by default for storing files. This stage is a convenient option if your files will only be accessed by a single user, but need to be copied into multiple tables.
 
 User stages have the following characteristics and limitations:
-- User stages are referenced using @~; e.g. use LIST @~ to list the files in a user stage.
+- User stages are referenced using @\~; e.g. use LIST @\~ to list the files in a user stage.
 - Unlike named stages, user stages cannot be altered or dropped.
 - User stages do not support setting file format options. Instead, you must specify file format and copy options as part of the COPY INTO \<table\> command.
 
