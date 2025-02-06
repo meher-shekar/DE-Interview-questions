@@ -69,12 +69,12 @@ Using time travel you can do:
 - **Restore tables, schemas, and databases** that have been dropped.
     
 Once the Time travel period is over, data is moved to the Fail-safe zone. For the snowflake standard edition, the default Time travel period is 1.
-For the snowflake Enterprise edition, for transient and temp DB, schema, tables, the default time travel period is 1. for permanent DB, schema, tables, and views, the default time travel can ranges from 1to 90 days.
+For the snowflake Enterprise edition, for **transient** & **temporary** DB, schema, tables, the default time travel period is 1. for **permanent** DB, schema, tables, and views, the default time travel can ranges from 1to 90 days.
 
 ---
 ### 8. **What is fail-safe in Snowflake?**
 
-When the time-travel period elapses, removed data moves to Fail-safe zone of 7 days for Enterprise edition and above. Once data goes to Failsafe, we need to contact Snowflake in order to restore the data. It may take from 24 hrs to days to get the data. The charges will occur from where the state of the data is changed on the basis of 24 Hr.
+When the time-travel period elapses, removed data moves to Fail-safe zone of 7 days for Enterprise edition and above. Once data goes to Failsafe, we need to contact Snowflake in order to restore the data. It may take from 24 hrs to 7 days to get the data. The charges will occur from where the state of the data is changed on the basis of 24 Hr.
 
 ---
 ### 9. **What is the difference between Time-Travel vs Fail-Safe in Snowflake?**
@@ -123,10 +123,10 @@ Once the table is created in Snowflake, it generates metadata about the table co
 ### 13. **Briefly explain the different data security features that are available in Snowflake**
 
 Multiple data security options are available in snowflake such as :
-- Secure view
-- Reader account
-- Shared data
-- RBAC
+- **Secure view**
+- **Reader account**
+- **Shared data**
+- **RBAC**
 
 ---
 ### 14. **What are the responsibilities of a storage layer in Snowflake?**
@@ -142,6 +142,7 @@ It has responsibilities such as :
 ### 15. **Is Snowflake an MPP database?**
 
 **Yes.**
+
 By MPP it means Massively Parallel processing. Snowflake is built on the cloud so it inherits the characteristics of the cloud such as scalability. It can handle parallel running queries by adding necessary compute resources. Snowflake supports shared-nothing architecture where the compute environment is shared between the users. When the query load increases, it automatically creates multiple clusters on nodes capable of handling the complex query logic and execution.
 
 ---
